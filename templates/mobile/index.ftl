@@ -23,7 +23,7 @@
 <body>
 
 	<header class="cyp-slides">
-		<div class="swiper-container">
+		<div class="slider-swiper">
 			<div class="swiper-wrapper">
 				<#list slideList as slide>
 				<div class="swiper-slide">
@@ -46,30 +46,23 @@
 			</ul>
 		</nav>
 		<hr>
-		<div class="cyp-gameList">
-			<#list gameList as game>
-			<article class="cyp-game clearfix">
-				<div class="cyp-figure">
-					<img src="${game.pic}" alt="">
-					<a href="${game.downUrl}" class="btn-gameDownload">Download</a>
-				</div>
-				<header>
-					<h1>
-						${game.name}
-						<span>HOT</span>
-					</h1>
-					<div class="cyp-game-stat">
-						<span>999.9M</span>
-						<span>999999</span>
+		<div class="tabs-swiper">
+			<div class="swiper-wrapper">
+
+
+				<div class="cyp-helpList swiper-slide">
+					<div class="content-slide">
+						<#include "./qa.partial.ftl" />
 					</div>
-				</header>
-				<section>
-					${game.introduction}
-					<a href="#" class="btn-more">more</a>
-				</section>
-			</article>
-			<hr>
-			</#list>
+				</div>
+
+				<div class="cyp-gameList swiper-slide">
+					<div class="content-slide">
+						<#include "./gameList.partial.ftl" />
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</article>
 
@@ -78,14 +71,31 @@
 
 	<script>
 
-	$(function(){
-	  var mySwiper = $('.swiper-container').swiper({
-	    mode:'horizontal',
-	    pagination: '.pagination',
-	    createPagination: true,
-	    loop: true
-	  });
-	});
+		$(function(){
+			$('.slider-swiper').swiper({
+				mode:'horizontal',
+				pagination: '.pagination',
+				createPagination: true,
+				loop: true
+			});
+
+			var tabsSwiper = $('.tabs-swiper').swiper({
+				speed:500,
+				onSlideChangeStart: function(){
+					$(".cyp-switchTab .active").removeClass('active');
+					$(".cyp-switchTab a").eq(tabsSwiper.activeIndex).addClass('active');
+				}
+			})
+			$(".cyp-switchTab a").on('touchstart mousedown click',function(e){
+				e.preventDefault()
+				$(".cyp-switchTab .active").removeClass('active')
+				$(this).addClass('active')
+				tabsSwiper.swipeTo( $(this).parent().index() )
+			})
+			$(".cyp-switchTab a").click(function(e){
+			  e.preventDefault()
+			})
+		});
 
 	</script>
 </body>
