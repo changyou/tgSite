@@ -10,8 +10,11 @@
 			<span>HOT</span>
 		</h1>
 		<div class="cyp-game-stat">
-			<span>999.9M</span>
-			<span>999999</span>
+			<span class="fn_right">
+				<i class="icon-download-alt"></i>
+				${game.downloads}
+			</span>
+			<span>${game.size}</span>
 		</div>
 	</header>
 	<section>

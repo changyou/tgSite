@@ -15,6 +15,7 @@
 
   <link rel="stylesheet" href="/components/normalize-css/normalize.css" />
   <link rel="stylesheet" href="/components/swiper/dist/idangerous.swiper.css" />
+  <link rel="stylesheet" href="/styles/webicons/css/webicons.css" />
   <link rel="stylesheet" href="/styles/mobile-index.css">
 
   <script src="/components/modernizr/modernizr.js"></script>
@@ -49,16 +50,15 @@
 		<div class="tabs-swiper">
 			<div class="swiper-wrapper">
 
+				<div class="cyp-gameList swiper-slide">
+					<div class="content-slide">
+						<#include "./gameList.partial.ftl" />
+					</div>
+				</div>
 
 				<div class="cyp-helpList swiper-slide">
 					<div class="content-slide">
 						<#include "./qa.partial.ftl" />
-					</div>
-				</div>
-
-				<div class="cyp-gameList swiper-slide">
-					<div class="content-slide">
-						<#include "./gameList.partial.ftl" />
 					</div>
 				</div>
 

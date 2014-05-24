@@ -22,6 +22,8 @@ module.exports = [{
 			{
 				id: '1001',
 				name: 'Texas Poker',
+				size: "999.9M",
+				downloads: "99998",
 				pic: 'http://lorempixel.com/144/144',
 				downUrl: 'http://nozuonodie.com',
 				introduction: 'This is a very newbility game, no zuo no die why you try'
@@ -29,6 +31,8 @@ module.exports = [{
 			{
 				id: '1001',
 				name: 'Texas Poker2',
+				size: "999.9M",
+				downloads: "99998",
 				pic: 'http://lorempixel.com/144/144?334',
 				downUrl: 'http://nozuonodie.com',
 				introduction: 'This is a very newbility game, no zuo no die why you tryadsfasdf asd ad '
