@@ -123,9 +123,11 @@ module.exports = function(grunt) {
             cwd: '<%= config.app %>',
             dest: '<%= config.dist %>',
             src: [
+              './*',
               'js/**/*.js',
-              '!styles/**/*.less',
-              'styles/'
+              'components/**/*',
+              'styles/**/*',
+              '!styles/**/*.less'
             ]
           }, {
             expand: true,
