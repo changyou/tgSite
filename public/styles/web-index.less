@@ -1,0 +1,58 @@
+@import 'basic.less';
+@import 'helper.less';
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.pageHeader {
+	padding-top: 10px;
+	border-bottom: 1px solid #B1B1B1;
+}
+.logo {
+	font-size: 48px;
+	color: #0090D4;
+	float: left;
+	text-decoration: none;
+	&:visited, &:hover, &:active {
+		color: #0090D4;
+	}
+}
+
+.topMenus {
+	float: right;
+}
+
+.menuItem {
+	display: inline-block;
+	margin: 20px 10px;
+	text-align: center;
+	a {
+		display: block;
+		line-height: 1;
+		text-decoration: none;
+		color: black;
+		position: relative;
+	}
+	cite {
+		font-size: 12px;
+		font-style: normal;
+		color: #989898;
+	}
+	&.active a, a:hover {
+		color: #018ED2;
+	}
+	&.active a:before {
+		position: absolute;
+		left: 50%;
+		top: -28px;
+		font-size: 32px;
+		margin-left: -10px;
+
+		content: '\e801';
+		font-family: "webicons";
+		color: #018ED2;
+	}
+}
