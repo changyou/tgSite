@@ -18,6 +18,6 @@
     "grunt-contrib-coffee": "~0.10.1",
     "grunt-contrib-less": "~0.11.0",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-freemarker": "~0.1.6"
+    "grunt-freemarker": "~0.1.7"
   }
 }
