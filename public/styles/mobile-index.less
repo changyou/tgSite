@@ -1,3 +1,128 @@
 @import 'basic.less';
 @import 'helper.less';
 
+.cyp-slides {
+	height: 225px;
+	overflow: hidden;
+	/* Specify Swiper's Size: */
+	.swiper-container, .swiper-slide {
+		position: relative;
+		width: 500px;
+		height: 200px;
+	}
+	.swiper-slide .slide-text {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		color: white;
+		padding: 3px 10px;
+		background-color: rgba(0,0,0,0.4);
+	}
+	.pagination {
+		text-align: center;
+	}
+	.swiper-pagination-switch {
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		margin-left: 5px;
+		background-color: #A1A1A1;
+		cursor: pointer;
+	}
+	.swiper-visible-switch {
+		background-color: #0091D3;
+	}
+}
+
+.cyp-main {
+
+}
+
+.cyp-switchTab {
+	text-align: center;
+	border-radius: 3px;
+
+	ul {
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		display: inline;
+	}
+	li:first-child a {
+		border-radius: 7px 0 0 7px;
+	}
+	li:last-child a {
+		border-radius: 0 7px 7px 0;
+	}
+	a {
+		width: 100px;
+		float:left;
+		color: #0095DE;
+		border: 1px solid #0095DE;
+		margin-left: -1px;
+		font-size: 24px;
+		padding: 6px 12px;
+		text-decoration: none;
+	}
+	a.active, a:hover {
+		background-color: #0095DE;
+		color: white;
+	}
+}
+
+.cyp-gameList {
+	hr {
+		margin: 10px 20px;
+	}
+}
+.cyp-game {
+	margin: 20px 15px;
+	.cyp-figure {
+		float: left;
+		text-align: center;
+		width: 150px;
+		margin-right: 20px;
+		img {
+			width: 144px;
+			height: 144px;
+			border-radius: 12px;
+		}
+	}
+	.btn-gameDownload {
+		padding: 3px 12px;
+		margin: 3px auto;
+		display: inline-block;
+
+		font-size: 24px;
+		background-color: #008FD5;
+		border-radius: 6px;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	header {
+		h1 {
+			font-size: 18px;
+			margin: 0;
+			span {
+				float: right;
+				color: red;
+			}
+		}
+		.cyp-game-stat {
+			color: #A0A0A0;
+			font-size: 18px;
+		}
+	}
+	section {
+		font-size: 18px;
+		.btn-more {
+		}
+	}
+}

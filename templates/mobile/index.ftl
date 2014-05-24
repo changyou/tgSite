@@ -14,41 +14,79 @@
   <meta name="description" content="" />
 
   <link rel="stylesheet" href="/components/normalize-css/normalize.css" />
+  <link rel="stylesheet" href="/components/swiper/dist/idangerous.swiper.css" />
   <link rel="stylesheet" href="/styles/mobile-index.css">
 
-  <script src="/components/jquery/dist/jquery.min.js" async></script>
-  <script src="/components/modernizr/modernizr.js" async></script>
+  <script src="/components/modernizr/modernizr.js"></script>
+  <script src="/components/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
 
 	<header class="cyp-slides">
-		<ul>
-			<li>1</li>
-			<li>2</li>
-			<li>3</li>
-		</ul>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<#list slideList as slide>
+				<div class="swiper-slide">
+					<img src="${slide.src}" alt="">
+					<div class="slide-text">
+						${slide.text}
+					</div>
+				</div>
+				</#list>
+			</div>
+		</div>
+		<div class="pagination"></div>
 	</header>
 
 	<article class="cyp-main">
-		<nav class="cyp-switchGroup">
-			<a href="#">GAMES</a>
-			<a href="#">Q&amp;A</a>
+		<nav class="cyp-switchTab clearfix">
+			<ul>
+				<li> <a href="#" class="active">GAMES</a> </li>
+				<li> <a href="#">Q&amp;A</a> </li>
+			</ul>
 		</nav>
+		<hr>
 		<div class="cyp-gameList">
 			<#list gameList as game>
-			<article class="cyp-game">
+			<article class="cyp-game clearfix">
 				<div class="cyp-figure">
+					<img src="${game.pic}" alt="">
+					<a href="${game.downUrl}" class="btn-gameDownload">Download</a>
 				</div>
 				<header>
-					<h1>${game.name}</h1>
+					<h1>
+						${game.name}
+						<span>HOT</span>
+					</h1>
+					<div class="cyp-game-stat">
+						<span>999.9M</span>
+						<span>999999</span>
+					</div>
 				</header>
 				<section>
 					${game.introduction}
+					<a href="#" class="btn-more">more</a>
 				</section>
 			</article>
+			<hr>
 			</#list>
 		</div>
 	</article>
 
+
+	<script src="/components/swiper/dist/idangerous.swiper.min.js"></script>
+
+	<script>
+
+	$(function(){
+	  var mySwiper = $('.swiper-container').swiper({
+	    mode:'horizontal',
+	    pagination: '.pagination',
+	    createPagination: true,
+	    loop: true
+	  });
+	});
+
+	</script>
 </body>
 </html>
