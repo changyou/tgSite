@@ -5,6 +5,7 @@
 	width: 1000px;
 	margin: 0 auto;
 	position: relative;
+	overflow: hidden;
 }
 
 .pageHeader {
@@ -54,5 +55,56 @@
 		content: '\e801';
 		font-family: "webicons";
 		color: #018ED2;
+	}
+}
+
+.showPic-swiper-container {
+	height: 200px;
+	position: relative;
+}
+
+.picThumbs {
+	position: relative;
+	width: 500px;
+	padding: 0 40px;
+	margin-top: 20px;
+	.thumbNavs {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -18px;
+		a {
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			font-size: 24px;
+			cursor: pointer;
+		}
+		a.moveLeft {
+			left: 0;
+		}
+		a.moveRight {
+			right: 25px;
+		}
+	}
+}
+.picThumb-swiper-container {
+	width: 100%;
+	height: 65px;
+	overflow: hidden;
+	.swiper-wrapper {
+		display: inline-block;
+	}
+	.swiper-slide {
+		display: inline-block;
+		img {
+			width: 90px;
+			height: 60px;
+			cursor: pointer;
+		}
+		&.active img {
+			border: 1px solid;
+		}
 	}
 }

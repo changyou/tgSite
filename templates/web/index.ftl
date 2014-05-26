@@ -38,6 +38,62 @@
 				</div>
 			</nav>
 		</header>
-	</div>
+
+		<div class="pageCarousel">
+			<div class="showPic-swiper-container">
+				<div class="swiper-wrapper">
+					<#list slideList as slide>
+					<div class="swiper-slide">
+						<img src="${slide.pic}" alt="">
+					</div>
+					</#list>
+				</div>
+			</div>
+			<div class="picThumbs">
+				<div class="picThumb-swiper-container">
+					<div class="swiper-wrapper">
+						<#list slideList as slide>
+						<div class="swiper-slide" data-index="${slide_index}">
+							<img src="${slide.thumb}" alt="">
+						</div>
+						</#list>
+					</div>
+				</div>
+				<div class="thumbNavs">
+					<a class="moveLeft"><i class="icon-left-open"></i></a>
+					<a class="moveRight"><i class="icon-right-open"></i></a>
+				</div>
+			</div>
+		</div>
+
+		<script src="/components/swiper/dist/idangerous.swiper.min.js"></script>
+		<script>
+			$(function() {
+
+				var showPicSwiper = $('.showPic-swiper-container').swiper({
+					moveStartThreshold: 100,
+					onlyExternal: true
+				});
+				var picThumbSwiper = $('.picThumb-swiper-container').swiper({
+					loop: true,
+					slidesPerView: 4
+				});
+				$(".picThumbs .moveLeft").on('click', function() {
+					picThumbSwiper.swipePrev();
+				});
+				$(".picThumbs .moveRight").on('click', function() {
+					picThumbSwiper.swipeNext();
+				});
+
+				$(".picThumb-swiper-container .swiper-slide img").click(function() {
+					var slide = $(this).closest(".swiper-slide");
+					showPicSwiper.swipeTo(slide.data('index'));
+					slide.siblings(".active").removeClass('active');
+					slide.addClass("active");
+					return false
+				});
+
+			});
+		</script>
 </body>
 </html>
