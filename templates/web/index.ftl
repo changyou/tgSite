@@ -45,6 +45,9 @@
 					<#list slideList as slide>
 					<div class="swiper-slide">
 						<img src="${slide.pic}" alt="">
+						<div class="text">
+							${slide.text}
+						</div>
 					</div>
 					</#list>
 				</div>
