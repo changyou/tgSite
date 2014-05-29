@@ -39,4 +39,28 @@ module.exports = [{
 			}
 		]
 	}
+}, {
+	view: '/mobile/detail.ftl',
+	out: '/detail.html',
+	data: {
+		game: {
+			id: '1001',
+			name: 'Texas Poker',
+			size: "999.9M",
+			stars: 5, // 0...10
+			version: "v1.0.2",
+			company: "CANGYOU",
+			updateAt: "2014-05-15",
+			downloads: "99998",
+			pic: 'http://lorempixel.com/144/144',
+			downUrl: 'http://nozuonodie.com',
+			screenshots: [
+				'http://lorempixel.com/225/400',
+				'http://lorempixel.com/225/400',
+				'http://lorempixel.com/225/400',
+				'http://lorempixel.com/225/400'
+			],
+			introduction: 'This is a very newbility game, no zuo no die why you try'
+		}
+	}
 }];
