@@ -1,9 +1,11 @@
 <#list gameList as game>
 <article class="cyp-game clearfix">
-	<div class="cyp-figure">
-		<img src="${game.pic}" alt="">
-		<a href="${game.downUrl}" class="btn-gameDownload">Download</a>
-	</div>
+	<figure class="cyp-gameFigure">
+		<img src="${game.pic}" />
+		<div class="cyp-gameDownload">
+			<a href="#" class="btn">FREE</a>
+		</div>
+	</figure>
 	<header>
 		<h1>
 			${game.name}
