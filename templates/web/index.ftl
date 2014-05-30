@@ -69,6 +69,46 @@
 			</div>
 		</div>
 
+		<div class="pageContent">
+			<div class="title clearfix">
+				<h2>TOP GAMES</h2>
+				<a class="link" href="">more</a>
+			</div>
+			<div class="top-games">
+				<div class="clearfix">
+					<#list topGames as game>
+					<article class="item">
+						<img class="img" src="${game.pic}">
+						<p class="name">${game.name}</p>
+						<p class="company">${game.company}</p>
+						<p class="download">
+							<a>Download</a>
+						</p>
+					</article>
+					</#list>
+				</div>
+			</div>
+		</div>
+
+		<div class="pageContent">
+			<div class="title clearfix">
+				<h2>Q&A</h2>
+				<a class="link" href="">more</a>
+			</div>
+			<div class="q-a">
+				<dl>
+					<dt>1.Why I can not download this game?</dt>
+					<dd>Why I can not download t this gameWhy I can not download this game</dd>
+					<dt>1.Why I can not download this game?</dt>
+					<dd>Why I can not download thdownload this game</dd>
+					<dt>1.Why I can not download this game?</dt>
+					<dd>Why I can not download this gameWhy I can not download this gameWhydownload this game</dd>
+				</dl>
+			</div>
+		</div>
+
+		<footer>© Copyright</footer>
+
 		<script src="/components/swiper/dist/idangerous.swiper.min.js"></script>
 		<script>
 			$(function() {
@@ -79,7 +119,7 @@
 				});
 				var picThumbSwiper = $('.picThumb-swiper-container').swiper({
 					loop: true,
-					slidesPerView: 4
+					slidesPerView: 5
 				});
 				$(".picThumbs .moveLeft").on('click', function() {
 					picThumbSwiper.swipePrev();

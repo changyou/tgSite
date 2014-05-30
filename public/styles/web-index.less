@@ -105,7 +105,6 @@ body{
 .picThumbs {
 	position: relative;
 	padding: 0 40px;
-	margin-top: 20px;
 	.thumbNavs {
 		width: 100%;
 		position: absolute;
@@ -114,15 +113,20 @@ body{
 		margin-top: -20px;
 		a {
 			position: absolute;
-			width: 40px;
-			height: 40px;
-			line-height: 40px;
+			width: 36px;
+			height: 36px;
+			line-height: 36px;
 			font-size: 24px;
 			cursor: pointer;
-			color: #fff;
-			background: #0190D6;
 			border-radius: 4px;
 			text-align: center;
+			background: #fff;
+			color: #0190D6;
+			border: 2px solid #0190D6;
+			&:hover{
+				color: #fff;
+				background: #0190D6;
+			}
 		}
 		a.moveLeft {
 			left: 10px;
@@ -133,9 +137,11 @@ body{
 	}
 }
 .picThumb-swiper-container {
-	width: 100%;
-	height: 90px;
+	width: 776px;
+	margin: 0 auto;
 	overflow: hidden;
+	padding-top: 17px;
+	height: 96px;
 	.swiper-wrapper {
 		display: inline-block;
 	}
@@ -145,9 +151,127 @@ body{
 			width: 140px;
 			height: 90px;
 			cursor: pointer;
+			border: 3px solid transparent;
 		}
-		&.active img {
-			border: 1px solid;
+		&.active {
+			position: relative;
+			&:before{
+				position: absolute;
+				left: 50%;
+				top: -30px;
+				margin-left: -12px;
+				width: 0;
+				height: 0;
+				border-color: transparent transparent #0190D6 transparent;
+				border-width: 15px 10px;
+				border-style: solid;
+				content: "";
+			}
+			img {
+				border: 3px solid #0190D6;
+			}
 		}
 	}
+}
+.pageContent{
+	border-bottom: 1px solid #9c9c9c;
+	clear: both;
+	padding: 15px 20px;
+	.title{
+		margin-top: -15px; 
+		h2{
+			float: left;
+			font-size: 30px;
+			margin: 20px 0;
+			font-weight: bold;
+			line-height: 1;
+		}
+		.link{
+			float: right;
+			color: #A0A0A0;
+			margin-top: 20px;
+			font-size: 24px;
+			text-decoration: underline;
+			font-weight: bold;
+			line-height: 1;
+			&:hover{
+				color: #008FD5;
+			}
+		}
+	}
+}
+
+.top-games{
+	padding: 0 20px;
+	.item{
+		width: 160px;
+		text-align: center;
+		float: left;
+		margin-right: 17px;
+		&:nth-child(5n){
+			margin-right: 0;
+		}
+		.img{
+			border-radius: 20px;
+		}
+		.name{
+			color: #000;
+			font-size: 24px;
+			font-weight: bold;
+			margin: 12px 0;
+		}
+		.company{
+			color: #A0A0A0;
+			font-size: 20px;
+			font-weight: bold;
+			margin: 12px 0;
+		}
+		.download{
+			margin: 12px 0;
+			a{
+				display: block;
+				background: #fff;
+				color: #008FD5;
+				border: 2px solid #008FD5;
+				border-radius: 4px;
+				line-height: 36px;
+				font-size: 24px;
+				font-weight: bold;
+				cursor: pointer;
+				&:hover{
+					background: #008FD5;
+					color: #fff;
+				}
+			}
+		}
+
+	}
+}
+
+.q-a{
+	dl{
+		margin-top: 0;
+		dd{
+			color: #000;
+			font-size: 24px;
+			font-weight: bold;
+			color: #a0a0a0;
+		}
+		dt{
+			color: #000;
+			font-size: 24px;
+			font-weight: bold;
+			margin-top: 20px;
+			&:nth-child(1){
+				margin-top: 0;
+			}
+		}
+	}
+
+}
+
+footer{
+	padding: 15px 20px;
+	font-size: 24px;
+	font-weight: bold;
 }
