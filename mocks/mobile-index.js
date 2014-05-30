@@ -41,7 +41,7 @@ module.exports = [{
 	}
 }, {
 	view: '/mobile/detail.ftl',
-	out: '/detail.html',
+	out: '/mobile-detail.html',
 	data: {
 		game: {
 			id: '1001',

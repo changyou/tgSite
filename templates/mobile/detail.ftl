@@ -46,9 +46,9 @@
 						<section>
 							<h3>${game.name}</h3>
 							<div class="cyp-gameStars">
-								<#list 1..game.stars as i>
-									${i}
-								</#list>
+								<div class="stars" style="width:${27*5}px" data-stars="${game.stars}">
+									<i style="width:${game.stars/10*100}%"> </i>
+								</div>
 							</div>
 							<p>${game.company}</p>
 							<p>${game.size}</p>
@@ -89,8 +89,7 @@
 	<script>
 
 		$(function(){
-			// $('.cyp-gameScreenshots').swiper({
-			new Swiper('.cyp-gameScreenshots', {
+			$('.cyp-gameScreenshots').swiper({
 				slidesPerView: 2,
 				// mode: 'horizontal',
 				// scrollContainer: true,
