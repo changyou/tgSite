@@ -248,6 +248,18 @@ body{
 	}
 }
 
+//About us Q&A
+.about{
+	p{
+		margin: 0;
+		line-height: 2;
+		color: #a0a0a0;
+		font-weight: bold;
+		font-size: 24px;
+	}
+
+}
+
 .q-a{
 	dl{
 		margin-top: 0;
@@ -316,4 +328,167 @@ footer{
 
 .cyp-gameIntroduction {
 	padding: 10px 20px;
+}
+
+//games-list
+.games-list{
+	padding: 15px 5px;
+	border-bottom: 1px solid #9c9c9c;
+	.item{
+		float: left;
+		width: 468px-32px;
+		height: 210px;
+		position: relative;
+		border-top: 1px solid #a3a3a3;
+		padding-top: 34px;
+		padding-bottom: 30px;
+		&:nth-child(odd){
+			border-right: 1px solid #bfbfbf;
+			padding-right: 32px;
+			.more{
+				right: 32px;
+				bottom: 30px;
+			}
+			&:before{
+				right: -1px;
+				top: -1px;
+				position: absolute;
+				width: 40px;
+				height:40px;
+				background: #fff;
+				content: "";
+				border-radius: 0 0 0 50%;
+			}
+			&:after{
+				right: -1px;
+				bottom: -1px;
+				position: absolute;
+				width: 40px;
+				height:40px;
+				background: #fff;
+				content: "";
+				border-radius: 50% 0 0 0;
+			}
+		}
+		&:nth-child(even){
+			border-left: 1px solid #DCDCDC;
+			padding-left: 32px;
+			.more{
+				right: 0;
+				bottom: 30px;
+			}
+			&:before{
+				left: -1px;
+				top: -1px;
+				position: absolute;
+				width: 40px;
+				height:40px;
+				background: #fff;
+				content: "";
+				border-radius: 0 0 50% 0;
+			}
+			&:after{
+				left: -1px;
+				bottom: -1px;
+				position: absolute;
+				width: 40px;
+				height:40px;
+				background: #fff;
+				content: "";
+				border-radius: 0 50% 0 0;
+			}
+		}
+		&:nth-child(1){
+			border-top: none;
+		}
+		&:nth-child(2){
+			border-top: none;
+		}
+		figure{
+			float: left;
+			width: 160px;
+			text-align: center;
+			margin: 0;
+			margin-top: 10px;
+			img{
+				width: 144px;
+				height: 144px;
+				border-radius: 20px;
+			}
+		}
+		header{
+			margin-left: 170px;
+			.title{
+				position: relative;
+				margin-bottom: 5px;
+			}
+			h3{
+				font-weight: bold;
+				font-size: 24px;
+				margin: 0;
+			}
+			.status{
+				position: absolute;
+				top: 0;
+				right: 0;
+				font-weight: bold;
+				font-size: 24px;
+				&.hot{
+					color: #f00;
+				}
+				&.new{
+					color: #008fd5;
+				}
+			}
+			.info{
+				font-size: 20px;
+				color: #A1A1A1;
+				font-weight: bold;
+				position: relative;
+				p{
+					margin: 0;
+				}
+				.size{
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+			}
+		}
+		section{
+			margin-left: 170px;
+			font-size: 20px;
+			color: #000;
+			font-weight: bold;
+			line-height: 1.8;
+		}
+		.download{
+			margin: 12px 0;
+			a{
+				display: block;
+				background: #fff;
+				color: #008FD5;
+				border: 2px solid #008FD5;
+				border-radius: 4px;
+				line-height: 36px;
+				font-size: 24px;
+				font-weight: bold;
+				cursor: pointer;
+				&:hover{
+					background: #008FD5;
+					color: #fff;
+				}
+			}
+		}
+		.more{
+			position: absolute;
+			font-size: 24px;
+			color: #A0A0A0;
+			font-weight: bold;
+			&:hover{
+				color: #008fd5;
+			}
+
+		}
+	}
 }

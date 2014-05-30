@@ -107,7 +107,7 @@
 			</div>
 		</div>
 
-		<footer>© Copyright</footer>
+		<footer>&copy; Copyright</footer>
 
 		<script src="/components/swiper/dist/idangerous.swiper.min.js"></script>
 		<script>

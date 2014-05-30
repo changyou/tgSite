@@ -84,4 +84,52 @@ module.exports = [{
             introduction: 'This is a very newbility game, no zuo no die why you try'
         }
     }
+},{
+    view: "/web/about.ftl",
+    out: "/about.html",
+    data: {
+    }
+},{
+    view: "/web/games.ftl",
+    out: "/games.html",
+    data: {
+        games: [{
+            id: "1345",
+            pic: "http://placehold.it/144x144",
+            name:"Texas Poker",
+            isNew: true,
+            isHot: false,
+            version:"V 1.0.0.1",
+            size: "100.0M",
+            description:"descr iption descriptiond escripti ondescript iondes cription<br> give me five!"
+        },{
+            id: "1345",
+            pic: "http://placehold.it/144x144",
+            name:"Texas Poker",
+            isNew: false,
+            isHot: true,
+            version:"V 1.0.0.1",
+            size: "100.0M",
+            description:"descript iondescri pti ondescripti ondescri ptiond escription"
+        },{
+            id: "1345",
+            pic: "http://placehold.it/144x144",
+            name:"Texas Poker",
+            isNew: false,
+            isHot: true,
+            version:"V 1.0.0.1",
+            size: "100.0M",
+            description:"descript iondescri pti ondescripti ondescri ptiond escription"
+        },{
+            id: "1345",
+            pic: "http://placehold.it/144x144",
+            name:"Texas Poker",
+            isNew: false,
+            isHot: true,
+            version:"V 1.0.0.1",
+            size: "100.0M",
+            description:"descript iondescri pti ondescripti ondescri ptiond escription"
+        }
+        ]
+    }
 }];
