@@ -3,7 +3,7 @@
 
 Use Freemarker as templates.
 
-
+See also [static-site-builder](https://github.com/ijse/static-site-builder)
 
 ```
 # install
