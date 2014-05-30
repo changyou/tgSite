@@ -89,8 +89,7 @@
 	<script>
 
 		$(function(){
-			// $('.cyp-gameScreenshots').swiper({
-			new Swiper('.cyp-gameScreenshots', {
+			$('.cyp-gameScreenshots').swiper({
 				slidesPerView: 2,
 				// mode: 'horizontal',
 				// scrollContainer: true,
