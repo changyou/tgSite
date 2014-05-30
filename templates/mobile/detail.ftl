@@ -15,6 +15,7 @@
 
   <link rel="stylesheet" href="/components/normalize-css/normalize.css" />
   <link rel="stylesheet" href="/components/swiper/dist/idangerous.swiper.css" />
+  <link rel="stylesheet" href="/components/swiper-scrollbar/dist/idangerous.swiper.scrollbar.css" />
   <link rel="stylesheet" href="/styles/webicons/css/webicons.css" />
   <link rel="stylesheet" href="/styles/mobile-index.css">
 
@@ -26,7 +27,7 @@
 	<div class="cyp-main">
 		<nav class="cyp-switchTab clearfix">
 			<ul>
-				<li> <a href="#" class="active">GAMES</a> </li>
+				<li> <a href="/mobile.html" class="active">GAMES</a> </li>
 				<li> <a href="#">Q&amp;A</a> </li>
 			</ul>
 		</nav>
@@ -36,7 +37,7 @@
 			<div class="swiper-wrapper">
 				<div class="cyp-gameDetailWrap swiper-slide">
 					<div class="cyp-gameInfo clearfix">
-						<figure>
+						<figure class="cyp-gameFigure">
 							<img src="${game.pic}" />
 							<div class="cyp-gameDownload">
 								<a href="#" class="btn">FREE</a>
@@ -45,7 +46,9 @@
 						<section>
 							<h3>${game.name}</h3>
 							<div class="cyp-gameStars">
-
+								<#list 1..game.stars as i>
+									${i}
+								</#list>
 							</div>
 							<p>${game.company}</p>
 							<p>${game.size}</p>
@@ -57,11 +60,13 @@
 						<div class="swiper-wrapper">
 							<#list game.screenshots as ss>
 							<div class="swiper-slide">
-								<img src="${ss}">
+								<div><img src="${ss}"></div>
 							</div>
 							</#list>
 						</div>
 					</div>
+					<div class="swiper-scrollbar"></div>
+
 					<div class="cyp-gameIntroduction">
 						${game.introduction}
 					</div>
@@ -79,14 +84,22 @@
 
 
 	<script src="/components/swiper/dist/idangerous.swiper.min.js"></script>
+	<script src="/components/swiper-scrollbar/dist/idangerous.swiper.scrollbar.min.js"></script>
 
 	<script>
 
 		$(function(){
-			$('.cyp-gameScreenshots').swiper({
+			// $('.cyp-gameScreenshots').swiper({
+			new Swiper('.cyp-gameScreenshots', {
 				slidesPerView: 2,
-				mode: 'horizontal',
-				speed:500
+				// mode: 'horizontal',
+				// scrollContainer: true,
+				scrollbar: {
+					container: '.swiper-scrollbar',
+					draggable : true,
+					hide: false,
+					snapOnRelease: true
+				}
 			})
 			var tabsSwiper = $('.tabs-swiper').swiper({
 				speed:500,
@@ -102,7 +115,7 @@
 				tabsSwiper.swipeTo( $(this).parent().index() )
 			})
 			$(".cyp-switchTab a").click(function(e){
-			  e.preventDefault()
+			  // e.preventDefault()
 			})
 		});
 

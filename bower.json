@@ -5,7 +5,11 @@
     "modernizr": "~2.6.2",
     "jquery": "~2.1.0",
     "normalize-css": "~3.0.1",
-    "swiper": "~2.6.1"
+    "swiper": "~2.6.1",
+    "swiper-scrollbar": "~2.4.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "resolutions": {
+    "swiper": "~2.6.1"
+  }
 }
